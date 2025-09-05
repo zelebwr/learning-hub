@@ -53,6 +53,3 @@ Once you're onboarded, use these links to quickly jump to any section you need.
 -   **[🗃️ Master Templates](./templates/):** The source directory where all master copy-paste templates are stored.
 -   **[🛠️ Task Board](https://github.com/zelebwr/learning-hub):** Our Kanban board for tracking all active work.
 -   **[💡 Propose an Idea](https://github.com/zelebwr/learning-hub/issues/new/choose):** The direct link to create a new issue and start a contribution.
-
-This is a test line with a broken link: [Broken Link Test](http://this-is-a-definitely-broken-link.com)
-This line has a spelling mistak.
