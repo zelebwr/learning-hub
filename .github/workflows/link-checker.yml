@@ -1,0 +1,19 @@
+name: Link Checker
+
+on:
+  pull_request: # Action run on every pull request that changes Markdown files.
+    paths:
+      - '**.md'
+  schedule: 
+      - cron: '0 2 * * 0' # Runs on a schedule (once a week on Sunday at 2 AM UTC).
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Run Lychee Link Checker # Action to scan all .md files for links and check them.
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: '**/*.md'

@@ -1,0 +1,36 @@
+name: Issue Labeler
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  label-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add 'roadmap' label for roadmap proposals
+        # This step only runs if the issue title contains "Roadmap" (case-insensitive)
+        if: contains(github.event.issue.title, 'Roadmap')
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: roadmap
+
+      - name: Add 'bug' label for bug reports
+        # This step only runs if the issue title contains "Bug" or "Fix"
+        if: contains(github.event.issue.title, 'Bug') || contains(github.event.issue.title, 'Fix')
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: bug
+
+      - name: Add 'resource' label for new resource ideas
+        # This step only runs if the issue title contains "Resource"
+        if: contains(github.event.issue.title, 'Resource')
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: resource
