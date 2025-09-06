@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Auto-assign PR
-        uses: auto-assign-action@v1
+        uses: kentaro-m/auto-assign-action@v2
         with:
-          reviewers: zelebwr, AtokTajuddin
-
-          numberOfReviewers: 1
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"

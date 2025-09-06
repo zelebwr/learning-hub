@@ -1,0 +1,10 @@
+# This file configures the auto-assign action.
+
+# A list of usernames to be selected from for reviewing pull requests.
+reviewers:
+  - zelebwr
+  - AtokTajuddin
+
+# The number of reviewers to be assigned from the list above.
+# Set to 0 to disable.
+numberOfReviewers: 1
