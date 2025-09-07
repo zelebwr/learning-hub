@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Auto-assign PR
-        uses: kentaro-m/auto-assign-action@v1
+        uses: kentaro-m/auto-assign-action@v1.2.2
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
