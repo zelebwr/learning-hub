@@ -1,0 +1,24 @@
+// This is the configuration file for the Markdown Linter.
+{
+    "default": true,
+
+    // Here is an example of modifying a rule instead of disabling it.
+    // This rule (MD007) is for unordered list indentation. Let's say you
+    // wanted to indent with 4 spaces instead of the default 2.
+    "MD007": {
+        "indent": 4
+    },
+
+    // To disable a rule, add its code here and set the value to false.
+    "MD013": false, // Disabling line length rule
+    "MD014": false, // Disabling dollar sign rule
+    "MD024": false, // Disabling multiple headers with the same name rule
+    "MD025": {
+        "front_matter_title": "" // Disabling first header should be a top-level header rule
+    },
+    "MD028": false, // Disabling blank line inside blockquote rule
+    "MD030": false, // Disabling spaces after list markers rule
+    "MD033": false, // Disabling inline HTML rule
+    "MD036": false, // Disabling emphasis and strong emphasis rule
+    "MD041": false  // Disabling first line heading rule
+}
